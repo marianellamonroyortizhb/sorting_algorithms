@@ -4,15 +4,18 @@
  * bubble_sort - Bubble Sort
  * @array: Array
  * @size: Size of array
- * Return: Array print
+ * Return: Without return
  */
 void bubble_sort(int *array, size_t size)
 {
 	size_t counter1;
 	size_t counter2;
-	size_t counter_tmp = 0;
+	int counter_tmp = 0;
 
 	if (size  < 2)
+		return;
+
+	if (!array)
 		return;
 
 	for (counter1 = 0; counter1 < size - 1; counter1++)
