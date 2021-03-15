@@ -1,27 +1,31 @@
 
 #include "sort.h"
+
 /**
  * bubble_sort - Bubble Sort
  * @array: Array
  * @size: Size of array
  * Return: Without return
  */
+
 void bubble_sort(int *array, size_t size)
 {
-	size_t counter1;
-	size_t counter2;
-	int counter_tmp = 0;
+	unsigned int counter1;
+	unsigned int counter2;
+	int counter_tmp;
 
 
-	if (size  < 2)
+	if (size < 2)
 		return;
 
 	if (!array)
 		return;
 
-	for (counter1 = 0; counter1 < size - 1; counter1++)
+	while (counter1 < size - 1)
 	{
-		for (counter2 = 0; counter2 < size - counter2 - 1; counter2++)
+		counter2 = 0;
+
+		while (counter2 < size - 1)
 		{
 			if (array[counter2] > array[counter2 + 1])
 			{
@@ -30,6 +34,8 @@ void bubble_sort(int *array, size_t size)
 				array[counter2 + 1] = counter_tmp;
 				print_array(array, size);
 			}
+			counter2++;
 		}
+		counter1++;
 	}
 }
