@@ -8,26 +8,34 @@
  */
 void selection_sort(int *array, size_t size)
 {
-	size_t count1;
-	size_t count2;
-	size_t min;
-	size_t temp;
+	unsigned int count1 = 0;
+	unsigned int count2;
+	unsigned int count3;
+	int temp;
 
-	for (count1 = 0; count1 < size - 1; count1++)
+	if (size < 2)
+		return;
+
+	while (count1 < size)
 	{
-		min = count1;
+		count3 = count1;
+		temp = array[count1];
+		count2 = count1 + 1;
 
-		for (count2 = count1 + 1; count2 < size; count2++)
+		while (count2 < size)
 		{
-			if (array[count2] < array[min])
-				min = count2;
+			if (array[count2] < temp)
+				temp = array[count2];
+				count3 = count2;
+			count2++;
 		}
-		if (min != count2)
+
+		if (count3 != count1)
 		{
-			temp = array[min];
-			array[min] = array[count1];
+			array[count3] = array[count1];
 			array[count1] = temp;
 			print_array(array, size);
 		}
+		count1++;
 	}
 }
