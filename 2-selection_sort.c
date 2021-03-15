@@ -1,5 +1,4 @@
 #include "sort.h"
-
 /**
  * selection_sort - selection algorthms
  * @size: size input
@@ -8,9 +7,7 @@
  */
 void selection_sort(int *array, size_t size)
 {
-	unsigned int count1 = 0;
-	unsigned int count2;
-	unsigned int count3;
+	unsigned int count1 = 0, count2, count3;
 	int temp;
 
 	if (size < 2)
