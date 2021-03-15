@@ -12,13 +12,11 @@ void selection_sort(int *array, size_t size)
 
 	if (size < 2)
 		return;
-
 	while (count1 < size)
 	{
 		count3 = count1;
 		temp = array[count1];
 		count2 = count1 + 1;
-
 		while (count2 < size)
 		{
 			if (array[count2] < temp)
@@ -26,7 +24,6 @@ void selection_sort(int *array, size_t size)
 				count3 = count2;
 			count2++;
 		}
-
 		if (count3 != count1)
 		{
 			array[count3] = array[count1];
