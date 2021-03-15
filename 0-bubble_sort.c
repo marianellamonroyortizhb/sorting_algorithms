@@ -10,15 +10,12 @@
 
 void bubble_sort(int *array, size_t size)
 {
-	unsigned int counter1;
+	unsigned int counter1 = 0;
 	unsigned int counter2;
 	int counter_tmp;
 
 
 	if (size < 2)
-		return;
-
-	if (!array)
 		return;
 
 	while (counter1 < size - 1)
